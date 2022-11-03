@@ -16,6 +16,11 @@ export default function Buttons(props) {
         props.setPrev(props.current)
     }
 
+    function clear() {
+        props.setPrev('')
+        props.setCurrent('')
+    }
+
     return (
         <div className='buttonsContainer'>
             <button onClick={handleClick} type='button'>1</button>
@@ -31,7 +36,7 @@ export default function Buttons(props) {
             <button onClick={handleClick} type='button'>9</button>
             <button onClick={handleClick} type='button'>/</button>
             <button onClick={evaluate} className='eaqual'>=</button>
-            <button className='clear'>Clear</button>
+            <button onClick={clear} className='clear'>Clear</button>
             <button onClick={handleClick} type='button'>0</button>
             <button onClick={handleClick} type='button'>*</button>
             
