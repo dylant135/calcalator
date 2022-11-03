@@ -4,8 +4,8 @@ import Buttons from './components/Buttons';
 import React from 'react';
 
 function App() {
-  const [prev, setPrev] = React.useState([])
-  const [current, setCurrent] = React.useState([])
+  const [prev, setPrev] = React.useState('')
+  const [current, setCurrent] = React.useState('')
 
 
   return (

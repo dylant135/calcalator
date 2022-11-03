@@ -14,6 +14,12 @@ export default function Buttons(props) {
 
     function evaluate() {
         props.setPrev(props.current)
+        props.setCurrent(prevState => {
+            const nums = prevState.join('')
+            return (
+                eval(nums)
+            )
+        })
     }
 
     function clear() {
