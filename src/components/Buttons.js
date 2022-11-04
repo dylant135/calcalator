@@ -6,9 +6,16 @@ export default function Buttons(props) {
         const num = event.target.innerText
         console.log(num)
         props.setCurrent(prevState => {
-            return (
-                [...prevState, num]
-            )
+            if(Array.isArray(prevState)) {
+                return (
+                    [...prevState, num]
+                )
+            } else {
+                return (
+                    [num]
+                )
+            }
+            
         })
     }
 
